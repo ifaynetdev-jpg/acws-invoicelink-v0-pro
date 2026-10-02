@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "build:cloud": "esbuild cloud-sync-entry.js --bundle --format=esm --splitting --target=es2020 --minify --outdir=cloud-assets --entry-names=cloud-sync --chunk-names=chunks/[name]-[hash]"
+  },
+  "pnpm": {
+    "overrides": {
+      "uuid@8.3.2": "11.1.1"
+    }
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.2",
+    "exceljs": "4.4.0",
+    "ioredis": "^6.0.0",
+    "resend": "^6.31.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}
